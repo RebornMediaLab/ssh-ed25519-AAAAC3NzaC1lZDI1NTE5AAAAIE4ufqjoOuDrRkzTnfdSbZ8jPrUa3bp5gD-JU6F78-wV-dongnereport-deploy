@@ -21,6 +21,7 @@ function parse(file) {
   return { meta, body: m ? m[2] : raw };
 }
 
+const gsv = cfg.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(cfg.googleSiteVerification)}">` : "";
 const adsense = cfg.adsensePublisherId
   ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(cfg.adsensePublisherId)}" crossorigin="anonymous"></script>`
   : "";
@@ -35,6 +36,7 @@ const layout = ({ title, desc, path: p, body, type = "website", date }) => `<!do
 <meta property="og:type" content="${type}"><meta property="og:url" content="${url(p)}"><meta property="og:locale" content="ko_KR">
 <link rel="alternate" type="application/rss+xml" title="${esc(cfg.siteName)}" href="/rss.xml">
 <link rel="stylesheet" href="/style.css">
+${gsv}
 ${adsense}
 </head><body>
 <header class="top"><div class="wrap"><a class="brand" href="/">${esc(cfg.siteName)}</a>
