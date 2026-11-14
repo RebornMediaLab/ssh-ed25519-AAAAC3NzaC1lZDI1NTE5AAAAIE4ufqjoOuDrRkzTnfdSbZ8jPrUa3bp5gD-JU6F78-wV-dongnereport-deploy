@@ -89,6 +89,7 @@ write("rss.xml", `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><chan
 if (cfg.adsensePublisherId) write("ads.txt", `google.com, ${cfg.adsensePublisherId.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n`);
 fs.copyFileSync(path.join(ROOT, "style.css"), path.join(DIST, "style.css"));
 for (const d of ["images"]) if (fs.existsSync(path.join(ROOT, d))) fs.cpSync(path.join(ROOT, d), path.join(DIST, d), { recursive: true });
+if (fs.existsSync(path.join(ROOT, "static"))) for (const f of fs.readdirSync(path.join(ROOT, "static"))) fs.copyFileSync(path.join(ROOT, "static", f), path.join(DIST, f));
 fs.writeFileSync(path.join(DIST, "CNAME"), new URL(cfg.siteUrl).hostname + "\n");
 fs.writeFileSync(path.join(DIST, ".nojekyll"), "");
 console.log(`빌드 완료: 글 ${posts.length}개, 페이지 ${pages.length}개 → docs/`);
