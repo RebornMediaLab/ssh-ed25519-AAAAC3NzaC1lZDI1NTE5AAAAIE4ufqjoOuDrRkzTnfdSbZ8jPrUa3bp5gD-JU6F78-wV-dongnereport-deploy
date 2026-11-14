@@ -1,0 +1,16 @@
+:root{--bg:#fafaf7;--fg:#222;--muted:#6b6b66;--line:#e7e5dd;--accent:#2f6f5e;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#171917;--fg:#e8e8e3;--muted:#a3a39b;--line:#2c2f2c;--accent:#7ec5b0;--card:#1e211e}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.8 -apple-system,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+.top{border-bottom:1px solid var(--line);background:var(--card)}.top .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.brand{font-weight:700;color:var(--fg);text-decoration:none}nav a{margin-left:16px;color:var(--muted);text-decoration:none;font-size:15px}
+.hero-box{padding:36px 0 12px}.hero-box h1{margin:0 0 6px;font-size:28px}.hero-box p{margin:0;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}.card h2{margin:0 0 6px;font-size:19px;line-height:1.4}.card a{color:var(--fg);text-decoration:none}.card p{margin:4px 0;color:var(--muted);font-size:15px}
+.meta{font-size:13px;color:var(--muted)}
+.post{padding:28px 0 40px}.post h1{font-size:28px;line-height:1.35;margin:0 0 8px}.content h2{font-size:22px;margin:36px 0 10px;line-height:1.4}.content h3{font-size:18px;margin:26px 0 6px}
+.content p{margin:12px 0}.content ul,.content ol{padding-left:22px}.content li{margin:4px 0}.content a{color:var(--accent)}
+.content table{border-collapse:collapse;width:100%;font-size:15px;margin:16px 0}.content th,.content td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+.content blockquote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);color:var(--muted)}
+img.hero,.content img{max-width:100%;height:auto;border-radius:10px;margin:14px 0}
+.disclaimer{margin-top:32px;padding:14px 16px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:14px}
+.foot{border-top:1px solid var(--line);padding:24px 0;margin-top:40px;color:var(--muted);font-size:14px}.foot a{color:var(--muted)}

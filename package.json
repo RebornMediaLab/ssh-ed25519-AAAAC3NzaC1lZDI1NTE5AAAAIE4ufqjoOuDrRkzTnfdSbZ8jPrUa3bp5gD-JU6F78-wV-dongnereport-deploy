@@ -1,0 +1,7 @@
+{
+  "name": "life-info-site",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs", "serve": "node build.mjs && python3 -m http.server 4321 -d docs" },
+  "dependencies": { "marked": "^12.0.2" }
+}
